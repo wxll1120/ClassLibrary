@@ -1,0 +1,8 @@
+d:\Projects\ClassLibrary\ClassLibrary\bin\Debug\ClassLibrary.dll
+d:\Projects\ClassLibrary\ClassLibrary\bin\Debug\ClassLibrary.pdb
+d:\Projects\ClassLibrary\ClassLibrary\bin\Debug\log4net.dll
+d:\Projects\ClassLibrary\ClassLibrary\bin\Debug\Newtonsoft.Json.dll
+d:\Projects\ClassLibrary\ClassLibrary\bin\Debug\NPOI.dll
+d:\Projects\ClassLibrary\ClassLibrary\obj\Debug\ClassLibrary.dll
+d:\Projects\ClassLibrary\ClassLibrary\obj\Debug\ClassLibrary.pdb
+d:\Projects\ClassLibrary\ClassLibrary\bin\Debug\Dapper.dll

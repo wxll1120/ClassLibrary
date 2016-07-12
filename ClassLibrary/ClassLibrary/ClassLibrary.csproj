@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24A83F2E-68B6-4B38-B594-1991DAF7D401}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClassLibrary</RootNamespace>
+    <AssemblyName>ClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.40.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Include\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Include\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Include\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.2.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Include\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\BusinessBase.cs" />
+    <Compile Include="Configuration\AppType.cs" />
+    <Compile Include="Configuration\ConfigurationManager.cs" />
+    <Compile Include="Configuration\IConfigurationSection.cs" />
+    <Compile Include="DataAccess\MySql\DBUtil.cs" />
+    <Compile Include="DataAccess\SqlServer\DataAccessBase.cs" />
+    <Compile Include="DataAccess\SqlServer\DBUtil.cs" />
+    <Compile Include="Event\DelegateCollection.cs" />
+    <Compile Include="ExceptionHandling\BaseException.cs" />
+    <Compile Include="ExceptionHandling\BusinessCustomException.cs" />
+    <Compile Include="ExceptionHandling\BusinessException.cs" />
+    <Compile Include="ExceptionHandling\BusinessExceptionHandler.cs" />
+    <Compile Include="ExceptionHandling\DataAccessCustomException.cs" />
+    <Compile Include="ExceptionHandling\DataAccessException.cs" />
+    <Compile Include="ExceptionHandling\DataAccessExceptionHandler.cs" />
+    <Compile Include="ExceptionHandling\ExceptionHandler.cs" />
+    <Compile Include="ExceptionHandling\ServiceCustomException.cs" />
+    <Compile Include="ExceptionHandling\ServiceException.cs" />
+    <Compile Include="ExceptionHandling\ServiceExceptionHandler.cs" />
+    <Compile Include="ExceptionHandling\UserInterfaceCustomException.cs" />
+    <Compile Include="ExceptionHandling\UserInterfaceException.cs" />
+    <Compile Include="ExceptionHandling\UserInterfaceExceptionHandler.cs" />
+    <Compile Include="ExceptionHandling\ValidateException.cs" />
+    <Compile Include="Logging\EnterpriseLibraryLogHandler.cs" />
+    <Compile Include="Logging\ILog.cs" />
+    <Compile Include="Logging\Log4NetHandler.cs" />
+    <Compile Include="Logging\LogFactory.cs" />
+    <Compile Include="Logging\LogHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transaction\Transaction.cs" />
+    <Compile Include="Transaction\TransactionScope.cs" />
+    <Compile Include="Utility\BarCode\BarCode128Util.cs" />
+    <Compile Include="Utility\BarCode\BarcodeUtil.cs" />
+    <Compile Include="Utility\Common\CommonUtil.cs" />
+    <Compile Include="Utility\Common\ConvertUtil.cs" />
+    <Compile Include="Utility\Common\ImageUtil.cs" />
+    <Compile Include="Utility\Common\JSONUtil.cs" />
+    <Compile Include="Utility\Common\LibraryUtil.cs" />
+    <Compile Include="Utility\Common\Win32Util.cs" />
+    <Compile Include="Utility\Common\XmlUtil.cs" />
+    <Compile Include="Utility\Form\ControlUtil.cs" />
+    <Compile Include="Utility\Form\FormUtil.cs" />
+    <Compile Include="Utility\Form\ListControlItem.cs" />
+    <Compile Include="Utility\IO\FileUtil.cs" />
+    <Compile Include="Utility\Office\ExcelUtil.cs" />
+    <Compile Include="Utility\Security\SecurityUtil.cs" />
+    <Compile Include="Utility\Web\NetUtil.cs" />
+    <Compile Include="Utility\Web\WebUtil.cs" />
+    <Compile Include="WorkingProcess\EventHandlerList.cs" />
+    <Compile Include="WorkingProcess\WorkCompleteEventArgs.cs" />
+    <Compile Include="WorkingProcess\WorkProcessingEventArgs.cs" />
+    <Compile Include="WorkingProcess\WorkProcessManager.cs" />
+    <Compile Include="WorkingProcess\WorkSyncType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Include\Dapper.dll" />
+    <Content Include="Include\DapperExtensions.dll" />
+    <Content Include="Include\log4net.dll" />
+    <Content Include="Include\MySql.Data.dll" />
+    <Content Include="Include\Newtonsoft.Json.dll" />
+    <Content Include="Include\NPOI.dll" />
+    <Content Include="Include\TNS.Common.Web.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logging\log4net.config" />
+    <None Include="Logging\LogConfig.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
