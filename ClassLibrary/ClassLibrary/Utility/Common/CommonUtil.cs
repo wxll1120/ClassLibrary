@@ -531,5 +531,58 @@ namespace ClassLibrary.Utility.Common
 
             return false;
         }
+
+        public static int GetLastDayOfMonth(int year, int month)
+        {
+            return DateTime.DaysInMonth(year, month);
+        }
+
+        public static DateTime GetLatestDateTime(int year, int month)
+        {
+            return new DateTime(year, month, GetLastDayOfMonth(year, month), 23, 59, 59);
+        }
+
+        public static DateTime GetLatestDateTime(int year, int month, int day)
+        {
+            return new DateTime(year, month, day, 23, 59, 59);
+        }
+
+        public static DateTime GetLatestDateTime(string date)
+        {
+            DateTime convertResult = DateTime.MinValue;
+
+            DateTime.TryParse(date, out convertResult);
+
+            return new DateTime(convertResult.Year, convertResult.Month, convertResult.Day, 23, 59, 59);
+        }
+
+        public static DateTime GetLatestDateTime(DateTime dateTime)
+        {
+            return new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, 23, 59, 59);
+        }
+
+        public static DateTime GetEarliestDateTime(int year, int month)
+        {
+            return new DateTime(year, month, 1, 23, 59, 59);
+        }
+
+        public static DateTime GetEarliestDateTime(int year, int month, int day)
+        {
+            return new DateTime(year, month, day, 0, 0, 0);
+        }
+
+        public static DateTime GetEarliestDateTime(DateTime dateTime)
+        {
+            return new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, 0, 0, 0);
+        }
+
+        public static DateTime GetEarliesDateTime(string date)
+        {
+            DateTime convertResult = DateTime.MinValue;
+
+            DateTime.TryParse(date, out convertResult);
+
+            return new DateTime(convertResult.Year, convertResult.Month, convertResult.Day, 0, 0, 0);
+        }
     }
 }
